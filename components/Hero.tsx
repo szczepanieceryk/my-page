@@ -76,6 +76,22 @@ export const Hero = () => {
             </span>
           </button>
         </div>
+
+        {/* Tech stack badges */}
+        <div className="animate-slide-up animation-delay-800">
+          <p className="text-sm text-gray-500 mb-4">Tech Stack</p>
+          <div className="flex flex-wrap gap-3 justify-center max-w-3xl mx-auto">
+            {techStack?.map?.((tech, index) => (
+              <span
+                key={tech}
+                className="px-4 py-2 bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-lg text-gray-300 text-sm hover:border-blue-500/50 hover:text-blue-400 transition-all cursor-default hover:scale-110"
+                style={{ animationDelay: `${800 + index * 100}ms` }}
+              >
+                {tech}
+              </span>
+            )) || []}
+          </div>
+        </div>
       </div>
     </section>
   );
