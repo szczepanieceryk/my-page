@@ -11,7 +11,7 @@ export const Hero = () => {
     "Firebase",
   ];
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gray-950 overflow-hidden">
+    <section className="relative flex items-center justify-center bg-gray-950 overflow-hidden">
       {/* Animated background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-950/20 via-purple-950/20 to-gray-950 opacity-50" />
 
