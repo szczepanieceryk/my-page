@@ -8,6 +8,7 @@ export const Hero = () => {
     "Flask",
     "FFmpeg",
     "GIT",
+    "Firebase",
   ];
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gray-950 overflow-hidden">
