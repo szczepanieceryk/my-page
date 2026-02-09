@@ -58,24 +58,30 @@ export const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer" />
           </button>
 
-          <button className="group px-8 py-4 bg-transparent border-2 border-gray-700 text-gray-300 rounded-lg font-medium transition-all hover:text-white hover:scale-105 cursor-pointer">
-            <span className="flex items-center gap-2">
-              Contact Me
-              <svg
-                className="w-4 h-4 group-hover:translate-x-1 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
-            </span>
-          </button>
+          <a
+            href="https://www.linkedin.com/in/eryk-szczepaniec-94509a207/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="group px-8 py-4 bg-transparent border-2 border-gray-700 text-gray-300 rounded-lg font-medium transition-all hover:text-white hover:scale-105 cursor-pointer">
+              <span className="flex items-center gap-2">
+                Contact Me
+                <svg
+                  className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M14 5l7 7m0 0l-7 7m7-7H3"
+                  />
+                </svg>
+              </span>
+            </button>
+          </a>
         </div>
 
         {/* Tech stack badges */}
