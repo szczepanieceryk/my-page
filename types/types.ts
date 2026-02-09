@@ -4,4 +4,5 @@ export interface ProjectProps {
   description: string;
   imgSrc: string;
   techStack: string[];
+  url: string;
 }
