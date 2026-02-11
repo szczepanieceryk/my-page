@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { Project } from "./Project";
 import { projectsData } from "@/lib/projects";
 
@@ -7,7 +9,13 @@ export const ProjectsSection = () => {
       <h2 className="my-6 text-4xl">Commercial projects</h2>
       <div className="flex flex-wrap">
         {projectsData?.map?.((project) => (
-          <Project key={project.id} {...project} />
+          <Link
+            key={project.slug}
+            href={`/projects/${project.slug}`}
+            className="group"
+          >
+            <Project key={project.id} {...project} />
+          </Link>
         ))}
       </div>
     </div>

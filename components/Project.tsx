@@ -7,22 +7,19 @@ export const Project: React.FC<ProjectProps> = ({
   description,
   imgSrc,
   techStack,
-  url,
 }) => {
   return (
     <div className="mt-8 p-3 w-[95%] md:max-w-[450px] mx-auto rounded-lg">
       <h3 className="text-2xl">{title}</h3>
       <small>{description}</small>
       <div className="mt-6">
-        <a href={url} target="_blank" rel="noopener noreferrer">
-          <Image
-            src={imgSrc}
-            alt={title}
-            width={500}
-            height={300}
-            className="rounded-lg "
-          />
-        </a>
+        <Image
+          src={imgSrc}
+          alt={title}
+          width={500}
+          height={300}
+          className="rounded-lg "
+        />
         <span className="mt-6 mb-4 block text-left">Tech Stack</span>
         <div className="flex flex-wrap gap-3 mx-auto">
           {techStack?.map?.((tech, index) => (
