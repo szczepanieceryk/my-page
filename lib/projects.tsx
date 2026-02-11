@@ -25,3 +25,7 @@ export const projectsData: ProjectProps[] = [
     url: "https://www.simplevideoeditor.com/",
   },
 ];
+
+export const getProjectBySlug = (slug: string): ProjectProps | undefined => {
+  return projectsData?.find?.((p) => p.slug === slug);
+};
