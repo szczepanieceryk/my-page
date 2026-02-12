@@ -5,6 +5,8 @@ export const projectsData: ProjectProps[] = [
     slug: "farluner-page",
     title: "Farluner Apps & Games",
     description: "Landing page",
+    longDescription:
+      "Software company specializing in web and mobile applications.",
     imgSrc: "/images/farluner-landing.webp",
     techStack: [
       "React",
