@@ -7,7 +7,7 @@ export const ProjectsSection = () => {
   return (
     <div className="max-w-7xl mx-auto text-center">
       <h2 className="my-6 text-4xl">Commercial projects</h2>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap justify-center">
         {projectsData?.map?.((project) => (
           <Link
             key={project.slug}
