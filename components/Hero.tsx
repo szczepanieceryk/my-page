@@ -83,7 +83,7 @@ export const Hero = () => {
         {/* Tech stack badges */}
         <div className="animate-slide-up animation-delay-800">
           <p className="text-sm text-gray-500 mb-4">Tech Stack</p>
-          <div className="flex flex-wrap gap-3 justify-center max-w-3xl mx-auto">
+          <div className="flex flex-wrap gap-3 justify-center max-w-xl mx-auto">
             {techStack?.map?.((tech, index) => (
               <span
                 key={tech}
