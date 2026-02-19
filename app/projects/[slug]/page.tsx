@@ -22,6 +22,16 @@ export default async function ProjectPage({
   return (
     <div className="max-w-7xl p-4 mx-auto text-center">
       <div>
+        <div className="text-center md:text-left">
+          <Link
+            href="/"
+            className="my-4 py-2 px-4 inline-block border border-gray-700 hover:border-blue-400 text-white hover:text-blue-400 rounded-lg transition-all"
+            style={{ animationDelay: "200ms" }}
+          >
+            Go back
+          </Link>
+        </div>
+
         <h1 className="text-3xl font-bold">{project?.title}</h1>
         <p>{project?.description}</p>
         {project?.longDescription && (
