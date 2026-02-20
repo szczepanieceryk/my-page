@@ -11,7 +11,9 @@ export default function Home() {
 
       <main className="z-100">
         <Hero />
-        <ProjectsSection />
+        <section id="projects-section">
+          <ProjectsSection />
+        </section>
       </main>
     </div>
   );
