@@ -36,7 +36,7 @@ export default async function ProjectPage({
         <p>{project?.description}</p>
         {project?.longDescription && (
           <div className="my-6 mx-auto p-6 bg-gray-800/60 rounded-lg max-w-2xl space-y-4 text-left">
-            {project.longDescription.map((item, idx) => {
+            {project?.longDescription?.map?.((item, idx) => {
               const html = item.replace(
                 /<strong>(.*?)<\/strong>/gi,
                 '<strong class="font-semibold text-blue-400">$1</strong>',
@@ -48,7 +48,7 @@ export default async function ProjectPage({
                   dangerouslySetInnerHTML={{ __html: html }}
                 />
               );
-            })}
+            }) || []}
           </div>
         )}
 
