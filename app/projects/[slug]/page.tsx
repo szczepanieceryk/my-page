@@ -35,8 +35,35 @@ export default async function ProjectPage({
         <h1 className="text-3xl font-bold">{project?.title}</h1>
         <p>{project?.description}</p>
         {project?.longDescription && (
-          <p className="my-6">{project?.longDescription}</p>
+          <div className="my-6 mx-auto p-6 bg-gray-800/60 rounded-lg max-w-2xl space-y-4 text-left">
+            {project.longDescription.map((item, idx) => {
+              const html = item.replace(
+                /<strong>(.*?)<\/strong>/gi,
+                '<strong class="font-semibold text-blue-400">$1</strong>',
+              );
+              return (
+                <p
+                  key={idx}
+                  className="leading-relaxed text-gray-300"
+                  dangerouslySetInnerHTML={{ __html: html }}
+                />
+              );
+            })}
+          </div>
         )}
+
+        <div className="my-10 flex flex-wrap gap-3 mx-auto justify-center">
+          <span style={{ flexBasis: "100%" }}>Tech stack</span>
+          {project?.techStack?.map?.((tech, index) => (
+            <span
+              key={tech}
+              className="px-4 py-2 bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-lg text-gray-300 text-sm hover:border-blue-500/50 hover:text-blue-400 transition-all cursor-default hover:scale-110"
+              style={{ animationDelay: `${800 + index * 100}ms` }}
+            >
+              {tech}
+            </span>
+          )) || []}
+        </div>
 
         <Image
           src={project?.imgSrc}
@@ -54,18 +81,6 @@ export default async function ProjectPage({
         >
           Visit Project
         </a>
-
-        <div className="my-6 flex flex-wrap gap-3 mx-auto justify-center">
-          {project?.techStack?.map?.((tech, index) => (
-            <span
-              key={tech}
-              className="px-4 py-2 bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-lg text-gray-300 text-sm hover:border-blue-500/50 hover:text-blue-400 transition-all cursor-default hover:scale-110"
-              style={{ animationDelay: `${800 + index * 100}ms` }}
-            >
-              {tech}
-            </span>
-          )) || []}
-        </div>
       </div>
     </div>
   );
