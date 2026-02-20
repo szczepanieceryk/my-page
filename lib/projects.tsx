@@ -20,8 +20,13 @@ export const projectsData: ProjectProps[] = [
     slug: "simple-video-editor",
     title: "Simple Video Editor",
     description: "Web App for video optimization & editing",
+    longDescription: [
+      "A web application designed for easy video editing and optimization.",
+      "Built with a focus on performance and efficiency both on the client and server sides.",
+      "Individual subpages contain video optimization tools such as compressing, trimming, creating GIFs from videos or format conversion.",
+    ],
     imgSrc: "/images/sve-web-app.webp",
-    techStack: ["Python", "Flask", "CSS", "HTML", "JavaScript"],
+    techStack: ["Python", "Flask", "Docker", "CSS", "HTML", "JavaScript"],
     url: "https://www.simplevideoeditor.com/",
   },
 ];
